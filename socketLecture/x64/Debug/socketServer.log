@@ -1,0 +1,4 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppClean.targets(77,5): warning : 'd:\network_2\network_2\socketclient\x64\debug\socketlecture.exe' 경로에 대한 액세스가 거부되었습니다.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(514,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(socketServer.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+  socketLecture.cpp
+LINK : fatal error LNK1104: 'D:\Network_2\Network_2\socketClient\x64\Debug\socketLecture.exe' 파일을 열 수 없습니다.
