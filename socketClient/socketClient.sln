@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "socketClient", "socketClien
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "socketLecture", "..\socketLecture\socketServer.vcxproj", "{8267FCB9-92B0-456C-9584-88A2E90CE249}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "multiThread", "multiThread\multiThread.vcxproj", "{E8533AD1-DAA3-49B3-B89D-34EE8A852F61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{8267FCB9-92B0-456C-9584-88A2E90CE249}.Release|x64.Build.0 = Release|x64
 		{8267FCB9-92B0-456C-9584-88A2E90CE249}.Release|x86.ActiveCfg = Release|Win32
 		{8267FCB9-92B0-456C-9584-88A2E90CE249}.Release|x86.Build.0 = Release|Win32
+		{E8533AD1-DAA3-49B3-B89D-34EE8A852F61}.Debug|x64.ActiveCfg = Debug|x64
+		{E8533AD1-DAA3-49B3-B89D-34EE8A852F61}.Debug|x64.Build.0 = Debug|x64
+		{E8533AD1-DAA3-49B3-B89D-34EE8A852F61}.Debug|x86.ActiveCfg = Debug|Win32
+		{E8533AD1-DAA3-49B3-B89D-34EE8A852F61}.Debug|x86.Build.0 = Debug|Win32
+		{E8533AD1-DAA3-49B3-B89D-34EE8A852F61}.Release|x64.ActiveCfg = Release|x64
+		{E8533AD1-DAA3-49B3-B89D-34EE8A852F61}.Release|x64.Build.0 = Release|x64
+		{E8533AD1-DAA3-49B3-B89D-34EE8A852F61}.Release|x86.ActiveCfg = Release|Win32
+		{E8533AD1-DAA3-49B3-B89D-34EE8A852F61}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
