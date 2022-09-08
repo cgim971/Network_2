@@ -4,6 +4,7 @@
 #include <iostream>
 #include <thread>
 #include <ctime>
+#include <mutex>
 
 using namespace std;
 
@@ -23,9 +24,32 @@ void func2()
 	}
 }
 
-void add(int* val, int min, int max) {
+void add1(int* val, int min, int max, mutex* m1, mutex* m2) {
 	for (int i = min; i <= max; i++) {
-		*val += i;
+		m1->lock();
+		m2->lock();
+		cout << "Thread 1" << endl;
+		//*val += i;
+		m2->unlock();
+		m1->unlock();
+	}
+}
+
+void add2(int* val, int min, int max, mutex* m1, mutex* m2) {
+	for (int i = min; i <= max; i++) {
+		while (true) {
+			m2->lock();
+			if (m1->try_lock()) {
+				m2->unlock();
+				continue;
+			}
+			cout << "Thread 2" << endl;
+			//*val += i;
+			m1->unlock();
+			m2->unlock();
+
+			break;
+		}
 	}
 }
 
@@ -43,17 +67,21 @@ int main()
 	t2.join();
 	t3.join();*/
 
+	mutex m1, m2;
+
 	int num = 0;
 
 	float start = clock();
 
-	thread t1(add, &num, 1, 3333);
-	thread t2(add, &num, 3334, 6666);
-	thread t3(add, &num, 6667, 10000);
+	//thread t1(add, &num, 1, 3333, &m1);
+	//thread t2(add, &num, 3334, 6666, &m1);
+	//thread t3(add, &num, 6667, 10000, &m1);
+	thread t1(add1, &num, 1, 10, &m1, &m2);
+	thread t2(add2, &num, 11, 20, &m1, &m2);
 
 	t1.join();
 	t2.join();
-	t3.join();
+	//t3.join();
 
 	float end = clock();
 

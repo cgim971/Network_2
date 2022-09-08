@@ -1,4 +1,4 @@
 ﻿  multiThread.cpp
-D:\Network_2\Network_2\socketClient\multiThread\multiThread.cpp(48,14): warning C4244: '초기화 중': 'clock_t'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\Network_2\Network_2\socketClient\multiThread\multiThread.cpp(58,12): warning C4244: '초기화 중': 'clock_t'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Network_2\Network_2\socketClient\multiThread\multiThread.cpp(74,14): warning C4244: '초기화 중': 'clock_t'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Network_2\Network_2\socketClient\multiThread\multiThread.cpp(86,12): warning C4244: '초기화 중': 'clock_t'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   multiThread.vcxproj -> D:\Network_2\Network_2\socketClient\x64\Debug\multiThread.exe
