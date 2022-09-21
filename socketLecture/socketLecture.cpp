@@ -18,7 +18,7 @@
 // #pragma comment (lib, "Mswsock.lib")
 
 #define DEFAULT_BUFLEN 512
-#define DEFAULT_PORT "27015"
+#define DEFAULT_PORT "37015"
 
 
 struct client_type {
@@ -33,6 +33,48 @@ int process_client(client_type& new_client, std::vector<client_type>& client_arr
 int main();
 
 int process_client(client_type& new_client, std::vector<client_type>& client_array, std::thread& thread) {
+
+	std::string msg = "";
+	char tempmsg[DEFAULT_BUFLEN] = "";
+
+	while (1) {
+		memset(tempmsg, 0, DEFAULT_BUFLEN);
+
+		if (new_client.socket != 0) {
+			int iResult = recv(new_client.socket, tempmsg, DEFAULT_BUFLEN, 0);
+
+			if (iResult != SOCKET_ERROR) {
+				if (strcmp("", tempmsg)) {
+					msg = "Client #" + std::to_string(new_client.id) + ": " + tempmsg;
+				}
+				std::cout << msg.c_str() << std::endl;
+
+				for (int i = 0; i < MAX_CLIENTS; i++) {
+					if (new_client.id != i) {
+						iResult = send(client_array[i].socket, msg.c_str(), strlen(msg.c_str()), 0);
+					}
+				}
+			}
+			else {
+				msg = "Client #" + std::to_string(new_client.id) + " Disconnected";
+				std::cout << msg << std::endl;
+
+				closesocket(new_client.socket);
+				closesocket(client_array[new_client.id].socket);
+
+				client_array[new_client.id].socket = INVALID_SOCKET;
+
+				for (int i = 0; i < MAX_CLIENTS; i++) {
+					if (client_array[i].socket != INVALID_SOCKET) {
+						iResult = send(client_array[i].socket, msg.c_str(), strlen(msg.c_str()), 0);
+					}
+				}
+				break;
+			} // else
+		} // if
+	} // while
+
+	thread.detach();
 	return 0;
 }
 
@@ -119,8 +161,16 @@ int  main(void)
 		}
 	}
 
+	closesocket(server_socket);
 
+	for (int i = 0; i < MAX_CLIENTS; i++) {
+		my_thread[i].detach();
+		closesocket(client[i].socket);
+	}
 
+	// cleanup
+	WSACleanup();
+	std::cout << "Program has ended successfully" << std::endl;
 
 	return 0;
 }
