@@ -1,0 +1,15 @@
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\bin\Debug\net6.0\MultiThread.exe
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\bin\Debug\net6.0\MultiThread.deps.json
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\bin\Debug\net6.0\MultiThread.runtimeconfig.json
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\bin\Debug\net6.0\MultiThread.dll
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\bin\Debug\net6.0\MultiThread.pdb
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\obj\Debug\net6.0\MultiThread.csproj.AssemblyReference.cache
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\obj\Debug\net6.0\MultiThread.GeneratedMSBuildEditorConfig.editorconfig
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\obj\Debug\net6.0\MultiThread.AssemblyInfoInputs.cache
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\obj\Debug\net6.0\MultiThread.AssemblyInfo.cs
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\obj\Debug\net6.0\MultiThread.csproj.CoreCompileInputs.cache
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\obj\Debug\net6.0\MultiThread.dll
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\obj\Debug\net6.0\refint\MultiThread.dll
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\obj\Debug\net6.0\MultiThread.pdb
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\obj\Debug\net6.0\MultiThread.genruntimeconfig.cache
+D:\Network_2\Network_2\C#\MultiThread\MultiThread\obj\Debug\net6.0\ref\MultiThread.dll
